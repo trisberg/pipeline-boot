@@ -1,0 +1,3 @@
+override = ""
+handler = "square,format,capitalize"
+artifact = ""
