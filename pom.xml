@@ -15,14 +15,14 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<spring-cloud.version>Greenwich.RC2</spring-cloud.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -85,12 +85,18 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-			  <groupId>com.google.cloud.tools</groupId>
-			  <artifactId>jib-maven-plugin</artifactId>
-			  <version>0.10.1</version>
-			  <configuration>
-				<allowInsecureRegistries>true</allowInsecureRegistries>
-			  </configuration>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>0.10.1</version>
+				<configuration>
+					<allowInsecureRegistries>true</allowInsecureRegistries>
+					<to>
+						<image>trisberg/pipeline:jib11</image>
+					</to>
+					<from>
+						<image>gcr.io/distroless/java:11</image>
+					</from>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
