@@ -36,9 +36,9 @@ public class PipelineApp {
 		return s -> WordUtils.capitalizeFully(s);
 	}
 
-	public static void main(String[] args) {
-		SpringApplication.run(PipelineApp.class, args);
-	}
+	// public static void main(String[] args) {
+	// 	SpringApplication.run(PipelineApp.class, args);
+	// }
 
 }
 
